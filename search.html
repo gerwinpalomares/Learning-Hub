@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script src="index.js"></script>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+<nav class="bg-gray-200 shadow shadow-gray-300 w-100 px-8 md:px-auto">
+	<div class="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
+		<div class="text-indigo-500 md:order-1">
+			<h3 class="font-extrabold">Learning Hub</h3>
+		</div>
+		<div class="text-gray-500 order-3 w-full md:w-auto md:order-2">
+			<ul class="flex font-semibold justify-between">
+				<li class="md:px-4 md:py-2  hover:text-indigo-400"><a href="search.html">Search</a></li>
+				<li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="explore.html">Explore</a></li>
+				<li class="md:px-4 md:py-2   hover:text-indigo-400"><a href="index.html">About</a></li>
+			</ul>
+		</div>
+		<div class="order-2 md:order-3">
+			<button onclick="openModal()" type="submit" class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>Login</span>
+            </button>
+		</div>
+	</div>
+</nav>
+
+
+<div class="min-h-screen bg-gray-100 flex justify-center items-center">
+	<div class="container mx-auto  bg-indigo-500 rounded-lg p-14">
+		<form>
+			<h1 class="text-center font-bold text-white text-4xl">It's time to Upskill and Shape</label>
+				<p class="mx-auto font-normal text-sm my-6 max-w-lg">Enter Professinal Skills You Want to Learn In Any Fields</p>
+				<div class="sm:flex items-center bg-white rounded-lg overflow-hidden px-2 py-1 justify-between">
+					<input class="text-base text-gray-400 flex-grow outline-none px-2 " type="text" placeholder="e.g(Creativity, Leadership, Presenation)" />
+					<div class="ms:flex items-center px-2 rounded-lg space-x-4 mx-auto ">
+						<select id="Com" class="text-base text-gray-800 outline-none border-2 px-4 py-2 rounded-lg">
+            <option value="it" selected>IT</option>
+            <option value="busin">Business</option>
+            <option value="rrg">Organization</option>
+            <option value="rrg">Psychology</option>
+            <option value="etc.">etc</option>
+          </select>
+						<button class="bg-indigo-500 text-white text-base rounded-lg px-4 py-2 font-thin">Search</button>
+					</div>
+				</div>
+		</form>
+	</div>
+</div>
+
+<div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+	<div class="bg-white rounded-lg p-6 text-center shadow-lg w-11/12 max-w-md">
+	  <h2 id="modal-title" class="text-2xl font-bold mb-4 text-indigo-800">Log In and Explore</h2>
+  
+	  <form id="login-form" class="space-y-4">
+		<div>
+		  <label for="email" class="block text-left text-gray-700 font-medium">Email</label>
+		  <input
+			type="email"
+			id="email"
+			placeholder="Enter your email"
+			class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+			required
+		  />
+		</div>
+  
+		<div>
+		  <label for="password" class="block text-left text-gray-700 font-medium">Password</label>
+		  <input
+			type="password"
+			id="password"
+			placeholder="Enter your password"
+			class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+			required
+		  />
+		</div>
+  
+		<div class="flex flex-col md:flex-row justify-between items-center gap-2">
+		  <button
+			type="button"
+			class="bg-gray-300 px-4 py-2 rounded-md hover:bg-gray-400 w-full md:w-auto"
+			onclick="closeModal()"
+		  >
+			Cancel
+		  </button>
+  
+		  <button
+			type="button"
+			class="text-white bg-green-800 underline-offset-1 px-6 py-2 rounded-md hover:bg-green-700 w-full md:w-auto"
+			onclick="signupmodal()"
+		  >
+			Sign In
+		  </button>
+  
+		  <button
+			type="submit"
+			class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 w-full md:w-auto"
+			onclick="login(event)"
+		  >
+			Proceed
+		  </button>
+		</div>
+	  </form>
+	</div>
+  </div>
+  
+
+  <div id="sign-upmodal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+    <div class="bg-white rounded-lg p-6 text-center shadow-lg w-3/4 md:w-1/3">
+      <h2 id="modal-title" class="text-2xl font-bold mb-4 text-indigo-800">Sign Up</h2>
+  
+      <form id="login-form" class="space-y-4">
+        <div>
+          <label for="name" class="block text-left text-gray-700 font-medium">First Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            placeholder="Enter your first name" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div>
+          <label for="Mname" class="block text-left text-gray-700 font-medium">Middle Name</label>
+          <input 
+            type="text" 
+            id="Mname" 
+            placeholder="Enter your middle name" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div>
+          <label for="Lname" class="block text-left text-gray-700 font-medium">Last Name</label>
+          <input 
+            type="text" 
+            id="Lname" 
+            placeholder="Enter your Last name" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div>
+         
+        <div>
+          <label for="Eemail" class="block text-left text-gray-700 font-medium">Email</label>
+          <input 
+            type="email" 
+            id="Eemail" 
+            placeholder="Enter your email" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div>
+          <label for="Ppassword" class="block text-left text-gray-700 font-medium">Password</label>
+          <input 
+            type="password" 
+            id="Ppassword" 
+            placeholder="Enter your password" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div class="flex justify-between items-center">
+          <button 
+            type="button" 
+            class="bg-gray-300 px-4 py-2 mt-10 rounded-md hover:bg-gray-400"
+            onclick="sucloseModal()"
+          >
+            Cancel
+          </button>
+
+		  <button 
+		  type="button" 
+		  class="bg-blue-500 px-4 py-2 mt-10 rounded-md hover:bg-blue-600 text-white"
+		  onclick="SignUp()"
+		>
+		  Sign In
+		</button>
+		
+        
+       
+        </div>
+		
+      </form>
+    </div>
+  </div>
+  <script>
+	function SignUp() {
+  const name = document.getElementById("name").value.trim();
+  const Mname = document.getElementById("Mname").value.trim();
+  const Lname = document.getElementById("Lname").value.trim();
+  const email = document.getElementById("Eemail").value.trim();
+  const password = document.getElementById("Ppassword").value.trim();
+
+  if (!name || !Mname || !Lname || !email || !password) {
+    alert("Please fill out all fields before proceeding!");
+    return;
+  }
+
+  window.location.href = "home.html";
+}
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+   
+    <!-- component -->
+    <nav class="bg-gray-200 shadow shadow-gray-300 w-100 px-8 md:px-auto">
+        <div class="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
+            <!-- Logo -->
+            <div class="text-indigo-500 md:order-1">
+                <h3 class="font-extrabold">Learning Hub</h3>
+            </div>
+            <div class="text-gray-500 order-3 w-full md:w-auto md:order-2">
+                <ul class="flex font-semibold justify-between">
+                    <!-- Active Link = text-indigo-500
+                    Inactive Link = hover:text-indigo-500 -->
+                    <li class="md:px-4 md:py-2  hover:text-indigo-400"><a href="search.html">Search</a></li>
+                    <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="explore.html">Explore</a></li>
+                    <li class="md:px-4 md:py-2   hover:text-indigo-400"><a href="index.html">About</a></li>
+                </ul>
+            </div>
+            <div class="order-2 md:order-3">
+                <button onclick="openModal()" type="submit" class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
+                    <!-- Heroicons - Login Solid -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Login</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+<center>
+<div class="">
+    <div class="items-center justify-center p-10 ">
+        <h3 class="font-extrabold text-3xl text-indigo-600">Learning Hub</h3>
+        <p class="px-2 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cum sit quae blanditiis ex libero illum reprehenderit magni ipsa. Fuga necessitatibus nemo blanditiis eveniet praesentium doloribus esse recusandae corrupti iure.
+        Beatae optio aspernatur nulla alias?
+        <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 mx-auto max-w-6xl">
+            <!-- Category Cards -->
+            <div class="category-card bg-white rounded-lg shadow-md hover:shadow-lg p-6 cursor-pointer transform transition-all hover:scale-105">
+              <h3 class="text-xl font-bold">Flexibility</h3>
+              <p class="text-gray-600">You can learn at your own pace and schedule. This is great for balancing education with work, family, or other commitments.</p>
+            </div>
+            <div class="category-card bg-white rounded-lg shadow-md hover:shadow-lg p-6 cursor-pointer transform transition-all hover:scale-105">
+              <h3 class="text-xl font-bold">Wide Variety of Options:</h3>
+              <p class="text-gray-600">Online platforms offer courses on almost any topic you can think of, often with access to expert instructors and industry professionals.</p>
+            </div>
+            <div class="category-card bg-white rounded-lg shadow-md hover:shadow-lg p-6 cursor-pointer transform transition-all hover:scale-105">
+              <h3 class="text-xl font-bold">Cost-Effectiveness:</h3>
+              <p class="text-gray-600">Many online courses are more affordable than traditional in-person classes, and some are even free. Plus, you save on commuting and accommodation costs.</p>
+            </div>
+        </main>
+        <img class="w-90 h-90" src="itoffice.jpg">
+        Quaerat iste minima nulla vitae iure, soluta tempora eius placeat natus ipsum, sequi provident sed quae molestias ratione labore mollitia reiciendis sit autem corporis? Tenetur facere nihil nulla nesciunt quam!
+        Ad sint natus tenetur libero pariatur, maxime vero quam facilis minima non ipsam quis aliquid nobis qui culpa architecto laborum omnis saepe quisquam voluptatum. Saepe architecto officia sint id odio.
+        In, tempora. Soluta laborum ipsum a nisi 
+        <img src="psyc.jpg">
+        Soluta mollitia ad voluptates doloremque fugit sed rem, fuga earum minus, esse nobis totam dolorum quo iure adipisci? Reprehenderit rem at minus dolorem, laudantium distinctio beatae alias deleniti necessitatibus natus.
+        Dicta nisi magnam delectus. Enim ducimus at iure provident corrupti voluptatum vero quisquam. Quibusdam maiores error, quasi, quos iure nostrum placeat animi, culpa obcaecati
+        Provident, dolores. Nihil, doloremque unde nesciunt laudantium, eos voluptate pariatur enim voluptatum, laboriosam possimus sed repellat veniam quidem consequuntur ut id? Cupiditate quos quod corporis tempore qui porro. In, sequi?
+        At quae fugiat est aperiam quod, recusandae necessitatibus possimus, exercitationem, voluptate quos soluta! A delectus, consequatur consectetur modi nihil at praesentium, iste dolor perspiciatis impedit, voluptas vero error quos blanditiis!
+        <img class="" src="learn.jpg">
+        Repellat, eaque aliquam. Excepturi ipsam distinctio itaque laborum reiciendis quaerat pariatur fuga explicabo officia provident, velit possimus ipsa earum impedit alias dolore eveniet molestias. Officiis sit dignissimos ducimus id quasi?
+        <h3 class="font-extrabold text-4xl text-indigo-500">"Learning is never-ending"</h3>
+       </p>
+       <div class="w-20 h-20 mt-3 p-45">
+        <button onclick="explore()" type="submit" class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
+            <!-- Heroicons - Login Solid -->
+            
+            <span class="font-bold" >Explore</span>
+        </button>
+        <p class="font-medium">Visit us on</p>
+    </div>
+    
+    <div class="w-20 h-20">
+        <img class="w-7 h-10 relative object-contain" src="Facebook_Logo_2023.png" ><p class="font-normal">facebook</p>
+
+    </div>
+    </center>
+</div>
+<div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+    <div class="bg-white rounded-lg p-6 text-center shadow-lg w-11/12 max-w-md">
+      <h2 id="modal-title" class="text-2xl font-bold mb-4 text-indigo-800">Log In and Explore</h2>
+  
+      <form id="login-form" class="space-y-4">
+        <div>
+          <label for="email" class="block text-left text-gray-700 font-medium">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+  
+        <div>
+          <label for="password" class="block text-left text-gray-700 font-medium">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+  
+        <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+          <button
+            type="button"
+            class="bg-gray-300 px-4 py-2 rounded-md hover:bg-gray-400 w-full md:w-auto"
+            onclick="closeModal()"
+          >
+            Cancel
+          </button>
+  
+          <button
+            type="button"
+            class="text-white bg-green-800 underline-offset-1 px-6 py-2 rounded-md hover:bg-green-700 w-full md:w-auto"
+            onclick="signupmodal()"
+          >
+            Sign In
+          </button>
+  
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 w-full md:w-auto"
+            onclick="login(event)"
+          >
+            Proceed
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+  <div id="sign-upmodal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+    <div class="bg-white rounded-lg p-6 text-center shadow-lg w-3/4 md:w-1/3">
+      <h2 id="modal-title" class="text-2xl font-bold mb-4 text-indigo-800">Sign Up</h2>
+  
+      <form id="login-form" class="space-y-4">
+        <div>
+          <label for="name" class="block text-left text-gray-700 font-medium">First Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            placeholder="Enter your first name" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div>
+          <label for="Mname" class="block text-left text-gray-700 font-medium">Middle Name</label>
+          <input 
+            type="text" 
+            id="Mname" 
+            placeholder="Enter your middle name" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div>
+          <label for="Lname" class="block text-left text-gray-700 font-medium">Last Name</label>
+          <input 
+            type="text" 
+            id="Lname" 
+            placeholder="Enter your Last name" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div>
+         
+        <div>
+          <label for="Eemail" class="block text-left text-gray-700 font-medium">Email</label>
+          <input 
+            type="email" 
+            id="Eemail" 
+            placeholder="Enter your email" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div>
+          <label for="Ppassword" class="block text-left text-gray-700 font-medium">Password</label>
+          <input 
+            type="Ppassword" 
+            id="Ppassword" 
+            placeholder="Enter your password" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+        <div class="flex justify-between items-center">
+          <button 
+            type="button" 
+            class="bg-gray-300 px-4 py-2 mt-10 rounded-md hover:bg-gray-400"
+            onclick="sucloseModal()"
+          >
+            Cancel
+          </button>
+          <button 
+		  type="button" 
+		  class="bg-blue-500 px-4 py-2 mt-10 rounded-md hover:bg-blue-600 text-white"
+		  onclick="SignUp()"
+		>
+		  Sign In
+		</button>
+        
+       
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
